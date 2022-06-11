@@ -1,16 +1,32 @@
 9.6.22 (10.6.22)
+find resources, copy, merge 1 with 2
+1
+https://youtu.be/gGuDNQbRQcg
+https://codingartistweb.com/2021/11/3d-flip-birthday-card-css/
+2
+https://lenadesign.org/2021/10/26/html-css-birthday-card/
+https://codepen.io/lenasta92579651/pen/ExvWqwa
 0:00 - 0:30 = 0:30
+
+
+11.6.22
+git init, create GitHub repo, initial commit, push
+14:30 - 15:00 = 0:30
+
+px to rem
+15:00 - 16:00 = 1:00
+
+add: onclick instead of :hover, pointer
+17:00 - 18:00 = 1:30
+
+add: pointer animation, numbers; style tweaks; commit, push
+20:00 - 21:30 = 1:30
+
 
 
 ---------
 
-total 0:30
+total 5:00
 
 
-
-https://youtu.be/gGuDNQbRQcg
-https://codingartistweb.com/2021/11/3d-flip-birthday-card-css/
-
-
-https://lenadesign.org/2021/10/26/html-css-birthday-card/
-https://codepen.io/lenasta92579651/pen/ExvWqwa
+https://gungunzp.github.io/bday_card
