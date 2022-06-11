@@ -1,0 +1,326 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	background-color: #fdbf00;
+}
+.card {
+	width: 640px;
+	height: 400px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+	transition: 1s;
+	/* transform: translateX(-120px); */
+}
+.card:hover {
+	transform: rotate(-5deg);
+}
+.card:hover .outside {
+	transform: rotateY(-130deg);
+}
+.outside,
+.inside {
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	left: 50.1%;
+}
+.inside {
+	background: linear-gradient(to right, #e7e7e7, #ffffff 30%);
+	line-height: 3;
+	padding: 0 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	left: 50%;
+}
+.outside {
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	z-index: 1;
+	transform-origin: left;
+	transition: 2s;
+	cursor: pointer;
+}
+.front,
+.back {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: rotateX(0deg);
+}
+.front {
+	background-color: #ffffff;
+}
+.back {
+	transform: rotateY(180deg);
+	background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+}
+.cake {
+	width: 100%;
+	position: absolute;
+	bottom: 30px;
+}
+.top-layer,
+.middle-layer,
+.bottom-layer {
+	height: 80px;
+	width: 240px;
+	background-repeat: repeat;
+	background-size: 60px 100px;
+	background-position: 28px 0;
+	background-image: linear-gradient(transparent 50px, #fedbab 50px, #fedbab 60px, transparent 60px),
+		radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+	border-radius: 10px 10px 0 0;
+	position: relative;
+	margin: auto;
+}
+.middle-layer {
+	transform: scale(0.85);
+	top: 6px;
+}
+.top-layer {
+	transform: scale(0.7);
+	top: 26px;
+}
+.candle {
+	/*   height: 45px;
+    width: 15px;
+    background: repeating-linear-gradient(
+      45deg,
+      #fd3018 0,
+      #fd3018 5px,
+      #ffa89e 5px,
+      #ffa89e 10px
+    );
+    position: absolute; */
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 202px;
+}
+/* .candle:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #ffa500;
+    border-radius: 0 50% 50% 50%;
+    bottom: 48px;
+    transform: rotate(45deg);
+    left: -1px;
+  } */
+.outside p {
+	font-size: 23px;
+	text-transform: uppercase;
+	margin-top: 30px;
+	text-align: center;
+	letter-spacing: 6px;
+	color: #000046;
+}
+.inside h1 {
+	font-size: 120px;
+	line-height: 120px;
+}
+
+/* candle */
+
+.candle {
+	position: absolute;
+	background: repeating-linear-gradient(-45deg, white, white 5px, #06d6a0 5px, #06d6a0 10px);
+	width: 10px;
+	height: 40px;
+	border-radius: 3px 3px 0 0;
+	/*   top:80px;
+    left:188px;   */
+}
+
+.candle:before {
+	content: '';
+	position: absolute;
+	background-color: #333;
+	width: 1px;
+	height: 10px;
+
+	top: -10px;
+	left: 4px;
+}
+
+.flame {
+	position: absolute;
+	opacity: 0.7;
+}
+
+.flame:before {
+	content: '';
+	position: absolute;
+	background-color: #fb5607;
+	border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+	transform: rotate(-45deg);
+	width: 20px;
+	height: 20px;
+	/*   top:55px;
+    left:183px; */
+	left: 150px;
+	/*   right: 0; */
+	bottom: 248px;
+	animation: scale 0.5s linear infinite;
+}
+
+.flame:after {
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+	background-color: #ffbe0b;
+	width: 11px;
+	height: 11px;
+	/*   top:61px;
+    left:187.5px; */
+	left: 154px;
+	right: 0;
+	bottom: 250px;
+	animation: scale 0.5s linear infinite;
+}
+
+@keyframes scale {
+	0% {
+		transform: scaleY(1) rotate(-45deg);
+	}
+	25% {
+		transform: scaleY(1.3) rotate(-45deg);
+	}
+	50% {
+		transform: scaleY(1) rotate(-45deg);
+	}
+	75% {
+		transform: scaleY(1.3) rotate(-45deg);
+	}
+	100% {
+		transform: scaleY(1) rotate(-45deg);
+	}
+}
+
+/* confetti */
+
+.confetti {
+	position: absolute;
+	width: 319px;
+	height: 400px;
+	overflow: hidden;
+	/*   background-color: #f5f; */
+}
+
+.squareOne,
+.squareTwo,
+.squareThree,
+.squareFour,
+.squareFive,
+.squareSix,
+.squareSeven,
+.squareEight,
+.squareNine,
+.squareTen {
+	position: absolute;
+	width: 10px;
+	height: 25px;
+	top: -110px;
+}
+
+.squareOne {
+	background-color: #ef476f;
+	animation: down 2.5s linear infinite;
+	left: 50px;
+}
+
+.squareTwo {
+	background-color: #06d6a0;
+	animation: down 2.3s linear infinite 0.2s;
+	left: 150px;
+}
+
+.squareThree {
+	background-color: #118ab2;
+	animation: down 2.4s linear infinite 0.4s;
+	left: 250px;
+}
+
+.squareFour {
+	background-color: #ffbe0b;
+	animation: down 2.7s linear infinite 0.1s;
+	left: 300px;
+}
+
+.squareFive {
+	background-color: #118ab2;
+	animation: down 2.6s linear infinite 0.7s;
+	left: 5px;
+}
+
+@keyframes down {
+	0% {
+		top: -110px;
+		transform: rotate(0deg) rotateY(-90deg);
+		opacity: 1;
+	}
+	100% {
+		top: 400px;
+		transform: rotate(360deg) rotateY(180deg);
+		opacity: 0.5;
+	}
+}
+
+@keyframes downTwo {
+	0% {
+		top: -130px;
+		transform: rotate(0deg) rotateY(90deg);
+		opacity: 1;
+	}
+	100% {
+		top: 400px;
+		transform: rotate(-360deg) rotateY(-180deg);
+		opacity: 0.5;
+	}
+}
+
+.squareSix {
+	background-color: #ffbe0b;
+	animation: downTwo 2.4s linear infinite 0.2s;
+	left: 70px;
+}
+
+.squareSeven {
+	background-color: #ef476f;
+	animation: downTwo 2.1s linear infinite 0.7s;
+	left: 170px;
+}
+
+.squareEight {
+	background-color: #ef476f;
+	animation: downTwo 2.4s linear infinite 0.9s;
+	left: 280px;
+}
+
+.squareNine {
+	background-color: #06d6a0;
+	animation: downTwo 2.9s linear infinite 0.9s;
+	left: 50px;
+}
+
+.squareTen {
+	background-color: #118ab2;
+	animation: downTwo 2.2s linear infinite 1.1s;
+	left: 350px;
+}
