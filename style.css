@@ -8,7 +8,7 @@
 html {
 	/* font-size: 1.7vw; */
 	font-size: 16px;
-	overflow: hidden;
+	/* overflow: hidden; */
 	background-color: #fdbf00;
 }
 
@@ -29,7 +29,7 @@ html {
 }
 
 .card.clicked {
-	transform: rotate(-5deg) translateX(-12rem);
+	transform: rotate(-5deg) translateX(-13rem);
 }
 
 .card.clicked .outside {
@@ -360,16 +360,13 @@ html {
 	position: absolute;
 	font-size: 0.9rem;
 	bottom: -2.5rem;
-	right: 6rem;
 	opacity: 1;
 	transition: 1s;
 	animation: scale 1s linear infinite;
-	z-index: -1;
 }
 
 .card.clicked .hint {
 	opacity: 0;
-	bottom: 0;
 }
 
 @keyframes scale {

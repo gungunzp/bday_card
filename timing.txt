@@ -35,9 +35,19 @@ remove pointer, add hint
 style tweaks & refactoring
 14:30 - 15:40 = 1:10
 
+deploy & testing
+15:40 - 16:00 = 0:20
+
+testing
+16:00 - 16:30 = 0:30
+
+add favicon, style tweaks, commit, push, deploy
+22:30 - 23:00 = 0:30
+
 ---------
 
-total 7:10
+total 8:30
 
 
 https://gungunzp.github.io/bday_card
+https://best-pm-birthday.netlify.app
